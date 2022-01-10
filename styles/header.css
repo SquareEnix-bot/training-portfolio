@@ -25,6 +25,10 @@
   padding: 30px 15px;
 }
 
+.contacts {
+  display: none;
+}
+
 .contacts__item {
   margin-bottom: 50px;
 }
@@ -49,6 +53,11 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
+  transition: color 0.3s ease-in-out;
+}
+
+.contacts__link:hover {
+  color: #3b557d;
 }
 
 .contacts__social-list {
@@ -68,27 +77,20 @@
   background-repeat: no-repeat;
 }
 
-.contacts__social-link_instagram {
-  background-image: url("../images/social-logo/instagram.svg");
+.contacts__social-link .contacts__social-link-image {
+  fill: rgb(255, 255, 255);
+  transition: fill 0.3s ease-in-out;
 }
 
-.contacts__social-link_telegram {
-  background-image: url("../images/social-logo/telegram.svg");
-}
-
-.contacts__social-link_linkedin {
-  background-image: url("../images/social-logo/linkedin.svg");
-}
-
-.contacts__social-link_github {
-  background-image: url("../images/social-logo/github.svg");
+.contacts__social-link:hover .contacts__social-link-image {
+  fill: rgb(59, 85, 125);
 }
 
 .header__contacts-burger {
   display: block;
   width: 27px;
   height: 14px;
-  background-image: url("../images/menu.svg");
+  background-image: url('../images/menu.svg');
 }
 
 @media (min-width: 768px) {
@@ -119,21 +121,20 @@
 
 @media (min-width: 992px) {
   .header {
-    position: fixed;
-    left: 0;
-    top: 0;
-    height: 100%;
-    padding-top: 50px;
-    padding-bottom: 58px;
+    width: 240px;
+    padding-top: 50px 0;
   }
 
   .header__container {
     height: 100%;
     flex-direction: column;
+    align-items: flex-end;
   }
 
   .header__contacts {
     position: static;
+    display: block;
+    padding: 0;
   }
 
   .contacts__list {
@@ -151,6 +152,7 @@
 
 @media (min-width: 1440px) {
   .header {
+    width: 355px;
     padding-top: 60px;
   }
 }
