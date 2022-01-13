@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Анастасія Вознюк - створення сайтів</title>
     
-    <link rel="stylesheet" href="./styles/index.css">    
+    <link rel="stylesheet" href="./styles/index.css">   
     
+    <script defer type="module" src="./js/swiper-bundle.esm.browser.min.js"></script>    
+    <script defer type="module" src="./js/slider.js"></script>
 </head>
 <body class="page">
     <header class="page__header header">
@@ -128,11 +130,11 @@
         <section class="portfolio">
             <div class="container">
                 <h2 class="portfolio__title">Портфоліо</h2>
-                <div class="portfolio__slider">
-                    <ul class="portfolio__list">
-                        <li class="portfolio__item">
+                <div class="portfolio__slider swiper">
+                    <ul class="portfolio__list swiper-wrapper">
+                        <li class="portfolio__item swiper-slide">
                             <article class="card">
-                                <img class="card__picture" src="" alt="">
+                                <img class="card__picture" src="./images/portfolio/chrismas-trees.jpg" alt="">
                                 <p class="card__data">
                                     <span class="card__client">Клієнт: Chrismas Trees</span>
                                     <time class="card__date" datetime="2021">рік: 2021</time>
@@ -140,9 +142,9 @@
                                 <h3 class="card__title">Landing-page</h3>
                             </article>
                         </li>                        
-                        <li class="portfolio__item">
+                        <li class="portfolio__item swiper-slide">
                             <article class="card">
-                                <img class="card__picture" src="" alt="">
+                                <img class="card__picture" src="./images/portfolio/cinema.jpg" alt="">
                                 <p class="card__data">
                                     <span class="card__client">Клієнт: Cinema</span>
                                     <time class="card__date" datetime="2020">рік: 2020</time>
@@ -150,9 +152,9 @@
                                 <h3 class="card__title">Багатосторінковий сайт</h3>
                             </article>
                         </li>
-                        <li class="portfolio__item">
+                        <li class="portfolio__item swiper-slide">
                             <article class="card">
-                                <img class="card__picture" src="" alt="">
+                                <img class="card__picture" src="./images/portfolio/full-apple.jpg" alt="">
                                 <p class="card__data">
                                     <span class="card__client">Клієнт: Full Apple</span>
                                     <time class="card__date" datetime="2020">рік: 2020</time>
@@ -160,9 +162,9 @@
                                 <h3 class="card__title">Landing-page</h3>
                             </article>
                         </li>                        
-                        <li class="portfolio__item">
+                        <li class="portfolio__item swiper-slide">
                             <article class="card">
-                                <img class="card__picture" src="" alt="">
+                                <img class="card__picture" src="./images/portfolio/friendly-house.jpg" alt="">
                                 <p class="card__data">
                                     <span class="card__client">Клієнт: Friendly House</span>
                                     <time class="card__date" datetime="2020">рік: 2020</time>
@@ -170,9 +172,9 @@
                                 <h3 class="card__title">Landing-page</h3>
                             </article>
                         </li>
-                        <li class="portfolio__item">
+                        <li class="portfolio__item swiper-slide">
                             <article class="card">
-                                <img class="card__picture" src="" alt="">
+                                <img class="card__picture" src="./images/portfolio/game-over.jpg" alt="">
                                 <p class="card__data">
                                     <span class="card__client">Клієнт: Game Over</span>
                                     <time class="card__date" datetime="2019">рік: 2019</time>
@@ -181,6 +183,8 @@
                             </article>
                         </li>
                     </ul>
+                    <button class="portfolio__arow portfolio__arow_left"></button>
+                    <button class="portfolio__arow portfolio__arow_right"></button>                    
                 </div>
             </div>
         </section>
