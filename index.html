@@ -5,11 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Анастасія Вознюк - створення сайтів</title>
+
+    <link rel="icon" href="./images/favicon.png" type="image/png">
     
-    <link rel="stylesheet" href="./styles/index.css">   
-    
+    <link rel="stylesheet" href="./styles/index.css">
+
+    <script defer src="./js/jquery-3.6.0.min.js"></script>
     <script defer type="module" src="./js/swiper-bundle.esm.browser.min.js"></script>    
-    <script defer type="module" src="./js/slider.js"></script>
+    <script defer type="module" src="./js/index.js"></script>
 </head>
 <body class="page">
     <header class="page__header header">
@@ -189,5 +192,49 @@
             </div>
         </section>
     </main>
+
+    <div class="page__overlay page__overlay_modal">
+        <div class="modal">
+            <h2 class="modal__title">Заповніть форму і я зв'яжусь з вами</h2>
+            <form class="modal__form callback">
+                <fieldset class="callback__group">
+                    <legend class="visually-hidden">Особисті дані</legend>
+                    <label class="callback__label">
+                        <span class="callback__label-text">ПІБ</span>
+                        <input class="callback__input" type="text" name="bio" placeholder="Введіть ваше ПІБ">
+                    </label>
+                    <label class="callback__label">
+                        <span class="callback__label-text">Телефон</span>
+                        <input class="callback__input" type="text" name="phone" placeholder="Ваш номер телефону">
+                    </label>
+                </fieldset>                
+                <fieldset class="callback__group connect">
+                    <legend class="connect__title">Де зручніше зв'язатись?</legend>
+                    <label class="connect__label">
+                        <input class="connect__radio" type="radio" name="connect" value="telegram">
+                        <span class="connect__text">Telegram</span>
+                    </label>
+                    <label class="connect__label">
+                        <input class="connect__radio" type="radio" name="connect" value="viber">
+                        <span class="connect__text">Viber</span>
+                    </label>
+                    <label class="connect__label">
+                        <input class="connect__radio" type="radio" name="connect" value="call">
+                        <span class="connect__text">Зателефонувати</span>
+                    </label>                    
+                </fieldset>
+                <button type="submit" class="callback__btn">Відправити</button>
+            </form>
+            <button class="modal__close">
+                <svg width="20" height="20" viewbox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="29.1681" height="1.94454" rx="0.972271"
+                        transform="matrix(0.707106 -0.707107 0.707106 0.707107 0 20.625)" fill="#282626" />
+                    <rect width="29.1681" height="1.94454" rx="0.972271"
+                        transform="matrix(0.707106 0.707107 -0.707106 0.707107 1.375 0)" fill="#282626" />
+                </svg>
+
+            </button>
+        </div>
+    </div>
 </body>
 </html>

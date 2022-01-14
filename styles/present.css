@@ -38,8 +38,15 @@
   line-height: 140%;
   text-transform: uppercase;
   color: #fff;
+  border: 2px solid #e87c40;
   background-color: #e87c40;
   border-radius: 4px;
+  transition: all ease-in-out 0.3s;
+}
+
+.present__order-btn:hover {
+  color: #e87c40;
+  background-color: transparent;
 }
 
 @media (min-width: 480px) {
